@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-13
     strategy:
       matrix:
         compiler: [GCC-13, LLVM-Clang-16, LLVM-Clang-17]
@@ -44,9 +44,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     
-    - uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '14.3.1'
+    # - uses: maxim-lobanov/setup-xcode@v1
+    #   with:
+    #     xcode-version: '14.3.1'
 
     - name: Create Build Environment
       run: |
