@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: macos-14
     strategy:
       matrix:
         compiler: [GCC-13, LLVM-Clang-16, LLVM-Clang-17]
