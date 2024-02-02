@@ -48,6 +48,11 @@ jobs:
     #   with:
     #     xcode-version: '14.3.1'
 
+    - name: Install llvm
+      run: |
+        brew uninstall llvm@15
+        brew install llvm@14
+        
     - name: Create Build Environment
       run: |
         ${{matrix.install}}
